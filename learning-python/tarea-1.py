@@ -55,3 +55,38 @@ def RandPasswd(len=8, mayus=True, num=True, special=True):
     return "".join(passwd)
 
 print("N°4: ", RandPasswd())
+
+#N°5
+def ConvertCelciusToFahrenheit(C):
+    return ((9 / 5) * C) + 32
+
+print("N°5: ", ConvertCelciusToFahrenheit(0))
+
+#N°6
+def FibRecursv(n):
+    if n <= 1:
+        return n
+    else:
+        return FibRecursv(n - 1) + FibRecursv(n - 2)
+
+def FitIter(n):
+    if n <= 1:
+        return n
+    f0 = 0
+    f1 = 1
+    for i in range(2, n + 1):
+        print(f0, f1)
+        f0 = f1
+        f1 = f0 + f1
+    return f1
+
+    a, b = 0, 1
+    
+    for _ in range(2, n + 1):  # Desde 2 hasta n
+        a, b = b, a + b  # Se actualizan los valores
+    return b
+
+
+#print("N°6: ", FibRecursv(5))
+print("N°6: ", FitIter(5))
+
