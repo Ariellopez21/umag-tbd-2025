@@ -75,18 +75,12 @@ def FitIter(n):
     f0 = 0
     f1 = 1
     for i in range(2, n + 1):
-        print(f0, f1)
-        f0 = f1
         f1 = f0 + f1
+        f0 = f1 - f0
     return f1
 
-    a, b = 0, 1
-    
-    for _ in range(2, n + 1):  # Desde 2 hasta n
-        a, b = b, a + b  # Se actualizan los valores
-    return b
 
 
-#print("N°6: ", FibRecursv(5))
-print("N°6: ", FitIter(5))
+print("N°6: ", FibRecursv(7))
+print("N°6: ", FitIter(7))
 
