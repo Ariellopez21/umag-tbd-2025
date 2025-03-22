@@ -79,8 +79,36 @@ def FitIter(n):
         f0 = f1 - f0
     return f1
 
-
-
 print("N°6: ", FibRecursv(7))
 print("N°6: ", FitIter(7))
 
+#N°7
+def StringCountVowelAndCons(str):
+    str = str.lower()
+    v = "aeiou"
+    c = "bcdfghjklmnpqrstvwxyz"
+    count = [0,0]
+    for i in str:
+        if i in v:
+            count[0] += 1
+        elif i in c:
+            count[1] += 1
+    return count
+
+print("N°7: ", StringCountVowelAndCons("HOLA mundo VaMos a Programar!"))
+
+#N°8
+def Adivinador():
+    num = random.randint(1, 100)
+    n = int(input("¡Adivina en qué número estoy pensando!\n Ingresa un número entre 1 y 100:"))
+    while True:
+        if n == num:
+            print("¡Wow! Me has superado. ¡Ganaste!")
+            return
+        elif n > num:
+            print("¡Síguelo intentando! Estás muy alto.")
+        else:
+            print("¡Síguelo intentando! Estás muy bajo.")
+        n = int(input("Ingresa otro número:"))
+
+Adivinador()
