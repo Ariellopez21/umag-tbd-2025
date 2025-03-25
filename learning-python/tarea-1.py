@@ -87,12 +87,12 @@ def StringCountVowelAndCons(str):
     str = str.lower()
     v = "aeiou"
     c = "bcdfghjklmnpqrstvwxyz"
-    count = [0,0]
-    for i in str:
-        if i in v:
-            count[0] += 1
-        elif i in c:
-            count[1] += 1
+    count = {"vocal": 0, "consonante": 0}
+    for letter in str:
+        if letter in v:
+            count["vocal"] += 1
+        elif letter in c:
+            count["consonante"] += 1
     return count
 
 print("N°7: ", StringCountVowelAndCons("HOLA mundo VaMos a Programar!"))
