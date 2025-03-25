@@ -111,4 +111,5 @@ def Adivinador():
             print("¡Síguelo intentando! Estás muy bajo.")
         n = int(input("Ingresa otro número:"))
 
+print("N°8:")
 Adivinador()
