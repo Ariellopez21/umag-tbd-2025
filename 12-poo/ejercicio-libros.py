@@ -1,3 +1,4 @@
+from colorama import Fore, Style
 class Libro:
     def __init__(self, titulo: str, autor: str, isbn: str, disponible: bool) -> None:
         self.titulo = titulo
@@ -65,31 +66,34 @@ class Biblioteca:
         print(titulo, " -> no disponible")
         return False
 
+### PROBANDO LAS CLASES ###
+
 quijote = Libro("Don Quijote de la Mancha", "Mike de Cervantes", "123-4", True)
 pythonLearning = Libro(titulo="Learning Python3, 6ta edición", autor="Diego Alvarez S.", isbn="002231-3", disponible=True)
 ariel = Usuario("Ariel", 1, [])
 mike = Usuario(nombre="Mike L. Loaiza", id=2, prestamos=[])
 biblioteca_umag = Biblioteca("Biblioteca de la Umag", [quijote], [ariel])
 
-print("Biblioteca UMAG, libros disponibles:")
+print(Fore.GREEN + "Biblioteca UMAG, libros disponibles:" + Style.RESET_ALL)
 biblioteca_umag.mostrar_libros_disponibles()
 
-print("Biblioteca UMAG, usuarios:")
+
+print(Fore.BLUE + "Biblioteca UMAG, usuarios:" + Style.RESET_ALL)
 biblioteca_umag.mostrar_usuarios()
 
 biblioteca_umag.agregar_libro(pythonLearning)
 biblioteca_umag.registrar_usuario(mike)
 
 print()
-print("BUSCAR LIBRO", quijote.titulo ,":")
+print(Fore.YELLOW + "BUSCAR LIBRO" + Style.RESET_ALL, quijote.titulo ,":")
 print(biblioteca_umag.buscar_libro_por_titulo(quijote.titulo))
 
 print()
 
-print("REFRESH: Biblioteca UMAG, libros disponibles:")
+print(Fore.YELLOW + "REFRESH: Biblioteca UMAG, libros disponibles:" + Style.RESET_ALL)
 biblioteca_umag.mostrar_libros_disponibles()
 
-print("REFRESH: Biblioteca UMAG, usuarios:")
+print(Fore.YELLOW + "REFRESH: Biblioteca UMAG, usuarios:" + Style.RESET_ALL)
 biblioteca_umag.mostrar_usuarios()
 
 ariel.tomar_libro(quijote)
@@ -97,10 +101,10 @@ mike.tomar_libro(pythonLearning)
 
 print()
 
-print("REFRESH 2: Biblioteca UMAG, libros disponibles:")
+print(Fore.YELLOW + "REFRESH 2: Biblioteca UMAG, libros disponibles:" + Style.RESET_ALL)
 biblioteca_umag.mostrar_libros_disponibles()
 
 print()
 
-print("BUSCAR LIBRO 2 ", pythonLearning.titulo ,":")
+print(Fore.YELLOW + "BUSCAR LIBRO 2 " + Style.RESET_ALL, pythonLearning.titulo ,":")
 print(biblioteca_umag.buscar_libro_por_titulo(pythonLearning.titulo))
