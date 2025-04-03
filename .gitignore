@@ -1,1 +1,7 @@
 .vscode
+mi-primer-entorno/.venv
+mi-primer-entorno/pyproject.toml
+mi-primer-entorno/README.md
+mi-primer-entorno/.python-version
+mylib/__pycache__
+mylib/mi-primer-entorno
