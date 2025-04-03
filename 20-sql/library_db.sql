@@ -713,4 +713,3 @@ ALTER TABLE ONLY public.loans
 --
 -- PostgreSQL database dump complete
 --
-
