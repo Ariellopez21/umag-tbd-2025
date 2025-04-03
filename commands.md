@@ -4,13 +4,13 @@ Para usar en terminal y que no se me olviden :c
 ## Instalar
 Para instalar **uv**
 
-´´´
+'''
 curl -LsSf https://astral.sh/uv/install.sh | sh
-´´´
+'''
 
 Para instalar **Postgresql**
 
-´´´
+'''
  sudo apt install postgresql -y
  sudo systemctl status postgresql
  sudo su - postgres 
@@ -18,13 +18,13 @@ createuser -s admin
 createdb -O admin admin
 psql
 \password admin
-´´´
+'''
 
-´´´
+'''
 createuser -s -h localhost -U admin [username]
 
 createdb -O [username] [username]
-´´´
+'''
 
 ## UV
  1983  uv tool install harlequin
